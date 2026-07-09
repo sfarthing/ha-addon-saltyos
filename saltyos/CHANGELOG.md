@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.3
+## 1.1.3.1
 
 - Enabled Home Assistant Ingress support.
 - Added noVNC WebSocket streaming support.
