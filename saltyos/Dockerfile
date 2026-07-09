@@ -15,6 +15,7 @@ WORKDIR /saltyos
 COPY saltyos.iso /saltyos/saltyos.iso
 COPY disk.img /saltyos/disk.img.seed
 COPY run.sh /run.sh
+COPY index.html /usr/share/novnc/index.html
 
 RUN chmod +x /run.sh
 
