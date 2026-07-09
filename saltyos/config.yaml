@@ -1,0 +1,26 @@
+name: SaltyOS
+version: "1.0.0"
+slug: saltyos
+description: Boot SaltyOS in QEMU and expose it through noVNC
+startup: services
+boot: auto
+init: false
+
+arch:
+  - amd64
+
+ports:
+  5900/tcp: 5900
+  6080/tcp: 6080
+
+ports_description:
+  5900/tcp: Raw QEMU VNC
+  6080/tcp: noVNC browser access
+
+webui: "http://[HOST]:[PORT:6080]/vnc.html?autoconnect=true&resize=scale"
+
+map:
+  - share:rw
+
+options: {}
+schema: {}
