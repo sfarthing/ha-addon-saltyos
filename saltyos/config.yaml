@@ -1,5 +1,5 @@
 name: SaltyOS
-version: "1.0.0"
+version: "1.0.1"
 slug: saltyos
 description: Boot SaltyOS in QEMU and expose it through noVNC
 startup: services
@@ -21,6 +21,8 @@ webui: "http://[HOST]:[PORT:6080]/vnc.html?autoconnect=true&resize=scale"
 
 map:
   - share:rw
+
+webui: "http://[HOST]:[PORT:6080]/vnc.html"
 
 options: {}
 schema: {}
