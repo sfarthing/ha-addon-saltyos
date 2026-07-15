@@ -1,5 +1,5 @@
 name: SaltyOS
-version: "1.1.4"
+version: "1.2"
 slug: saltyos
 description: Boot SaltyOS in QEMU and expose it through noVNC
 startup: services
