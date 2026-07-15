@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0
+
+- disable seed disk.img, modify code to create a new 32MB disk with formatted FAT16 Volume called SALTYOS, the new disk is created on initial installation within Home Assistant.
+
 ## 1.1.3.1
 
 - Enabled Home Assistant Ingress support.
