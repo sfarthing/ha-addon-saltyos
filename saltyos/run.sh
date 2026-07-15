@@ -6,16 +6,19 @@ PERSISTENT_DISK="/data/disk.img"
 DISK_SIZE="32M"
 
 echo "Starting SaltyOS add-on..."
-#rm -f "${PERSISTENT_DISK}"
+rm -f "${PERSISTENT_DISK}"
 
 if [ ! -f "${PERSISTENT_DISK}" ]; then
     echo "No persistent disk image found."
     echo "Creating /data/disk.img from bundled seed disk..."
     # cp "${SEED_DISK}" "${PERSISTENT_DISK}"
-    qemu-img create -f raw "${PERSISTENT_DISK}" "${DISK_SIZE}"   
+    qemu-img create -f raw "${PERSISTENT_DISK}" "${DISK_SIZE}"
+    echo "Formatting disk image as FAT16..."
+    mkfs.vfat -F 16 -n SALTYOS "${PERSISTENT_DISK}"
+
 fi
 
-echo "Using persistent disk: ${PERSISTENT_DISK}"
+echo "Using persistent FAT16 disk: ${PERSISTENT_DISK}"
 
 echo "Starting QEMU..."
 
