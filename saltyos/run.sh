@@ -6,7 +6,7 @@ PERSISTENT_DISK="/data/disk.img"
 DISK_SIZE="32M"
 
 echo "Starting SaltyOS add-on..."
-rm -f "${PERSISTENT_DISK}"
+#rm -f "${PERSISTENT_DISK}"
 
 if [ ! -f "${PERSISTENT_DISK}" ]; then
     echo "No persistent disk image found."
