@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0
+## 1.2.1
 
 - disable seed disk.img, modify code to create a new 32MB disk with formatted FAT16 Volume called SALTYOS, the new disk is created on initial installation within Home Assistant.
 
