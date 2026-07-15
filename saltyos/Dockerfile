@@ -8,7 +8,7 @@ RUN apt-get update && \
         websockify \
         bash \
         ca-certificates \
-        dosftools \
+        dosfstools \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /saltyos
